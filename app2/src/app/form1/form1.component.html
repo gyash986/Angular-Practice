@@ -1,0 +1,12 @@
+<form [formGroup]="myform" (ngSubmit)="onSubmit()">
+  <label for="name">Name:</label>
+  <input id="name" formControlName="name">
+  <div *ngIf="myform.get('name')?.invalid && myform.get('name')?.touched">
+    Name is required and must be at least 3 characters long.
+  </div>
+  <label>email</label>
+  <input id="email" formControlName="email">
+  <div *ngIf="myform.get('name')?.invalid && myform.get('name')?.touched">
+    Name is required and must be at least 3 characters long.
+  </div>
+</form>
